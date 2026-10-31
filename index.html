@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <!-- Meta tag essencial para Responsividade -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfólio Semântico - Seu Nome</title>
+    
+    <!-- Importação de Fonte Externa (Google Fonts: Roboto) -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    
+    <!-- Vincular arquivo CSS externo (mesma pasta) -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- Cabeçalho Principal -->
+    <header id="topo">
+        <img src="img/perfil.png" alt="Foto de perfil de Seu Nome sorrindo em frente ao computador" class="foto-perfil">
+        <h1>Olá, eu sou <span class="destaque-texto">Willyam Rocha da Silva</span></h1>
+        <p>Estudante de <strong>Análise e desenvolvimento de sistemas</strong> na instituição FATEC Carapicuíba</p>
+        <p><span class="destaque">Cidade/UF:</span> Carapicuíba / SP</p>
+        
+        <!-- Botões de Chamada para Ação -->
+        <div class="acoes-header">
+            <a href="#contato-form" class="btn btn-principal">Fale Comigo</a>
+            <a href="#projetos" class="btn btn-outline">Ver Meus Projetos</a>
+        </div>
+    </header>
+
+    <!-- Menu de Navegação Semântico com Flexbox -->
+    <nav>
+        <a href="#sobre">Sobre</a>
+        <a href="#habilidades">Habilidades</a>
+        <a href="#projetos">Projetos</a>
+        <a href="#hobbies">Hobbies</a>
+        <a href="#conhecimentos">Conhecimentos</a>
+        <a href="#objetivos">Objetivos</a>
+        <a href="#contato-form">Contato</a>
+    </nav>
+
+    <!-- Conteúdo Principal -->
+    <main>
+
+        <!-- Seção 1: Sobre Mim -->
+        <section id="sobre" class="card">
+            <h2>✨ Quem Sou Eu</h2>
+            <p>Sou um entusiasta de tecnologia que curte várias áreas da tecnologia e saber como a programação é aplicada no mundo.</p>
+            <p>Minha jornada na programação começou com o objetivo de construir softwares aprimorados, com mais opções e eficientes para os usuários.</p>
+        </section>
+
+        <!-- Seção de Interatividade com JavaScript -->
+        <section id="interatividade" class="card">
+            <h2>⚡ Interatividade com JavaScript</h2>
+            <p>Experimente os botões abaixo para ver o comportamento do site em tempo real:</p>
+    
+           <div class="acoes-header">
+               <button onclick="apresentacao()" class="btn btn-principal">Quem sou eu?</button>
+               <button onclick="alterarTitulo()" class="btn btn-secundario">Alterar Título</button>
+               <button onclick="destacarSobre()" class="btn btn-outline">Destacar Seção Sobre</button>
+               <button onclick="modoEscuro()" class="btn btn-principal">Modo Escuro / Claro</button>
+           </div>
+
+           <!-- Contador de cliques (Desafio extra) -->
+           <p style="margin-top: 15px;">Você clicou no botão de contagem <span id="contador">0</span> vezes.</p>
+           <button onclick="contarClique()" class="btn btn-outline">Contar Cliques</button>
+        </section>
+
+        <!-- Seção 2: Habilidades (Passo 2 da WEB109: Pílulas com Flexbox) -->
+        <section id="habilidades" class="card">
+            <h2>🛠️ Habilidades Técnicas</h2>
+            <div class="habilidades-lista">
+                <span class="hab-item">HTML (Estruturação Semântica)</span>
+                <span class="hab-item">CSS (Estilização e Box Model)</span>
+                <span class="hab-item">Lógica de Programação</span>
+                <span class="hab-item">Git & GitHub</span>
+            </div>
+        </section>
+
+        <!-- Seção 3: Projetos (Passo 4 da WEB109: Cards lado a lado) -->
+        <section id="projetos" class="card">
+            <h2>🚀 Meus Projetos</h2>
+            <div class="projetos-grid">
+                <div class="projeto-card">
+                    <h3>Página Pessoal</h3>
+                    <p>Primeiro projeto web desenvolvido com estrutura semântica em HTML e estilização CSS.</p>
+                    <a href="#" class="btn btn-principal btn-sm">Ver Projeto</a>
+                </div>
+                <div class="projeto-card">
+                    <h3>A civilização</h3>
+                    <p>Layout mostrando imagens históricas.</p>
+                    <a href="#" class="btn btn-principal btn-sm">Ver Projeto</a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Seção 4: Hobbies (Passo 3 da WEB109: Galeria Flexbox) -->
+        <section id="hobbies" class="card">
+            <h2>🎮 Meus Hobbies Favoritos</h2>
+            <ul>
+                <li>Ter curiosidades sobre tecnologia</li>
+                <li>Ter curiosidades de mitologia</li>
+                <li>Leitura sobre inglês</li>
+            </ul>
+
+            <h3>Galeria dos Meus Hobbies</h3>
+            <div class="galeria-hobbies">
+                <img src="img/tecnologia.png" alt="Representação da tecnologia pela internet">
+                <img src="img/mitologia.png" alt="Representação da mitologia grega">
+                <img src="img/ingles.png" alt="Representação do inglês">
+            </div>
+        </section>
+
+        <!-- Seção 5: Tabela de Conhecimentos -->
+        <section id="conhecimentos" class="card">
+             <h2>📅 Meus Conhecimentos e Experiência</h2>
+            <table class="tabela-conhecimentos">
+                <thead>
+                    <tr>
+                        <th>Tecnologia</th>
+                        <th>Nível</th>
+                        <th>Experiência</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>HTML</td>
+                        <td>Intermediário</td>
+                        <td>9 meses</td>
+                    </tr>
+                    <tr>
+                        <td>CSS3</td>
+                        <td>Básico/Intermediário</td>
+                        <td>13 meses</td>
+                    </tr>
+                    <tr>
+                        <td>JavaScript</td>
+                        <td>Em aprendizado</td>
+                        <td>1 ano</td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+
+        <!-- Seção 6: Objetivos Profissionais -->
+        <section id="objetivos" class="card">
+            <h2>🎯 Objetivos Profissionais</h2>
+            <ol  <li><strong>Curto prazo (6 meses):</strong> Dominar JavaScript, Python, HTML e CSS e construir projetos Front-End dinâmicos.</li>
+                <li><strong>Médio prazo (1-2 anos):</strong> Conseguir uma oportunidade como Desenvolvedor Junior.</li>
+                <li><strong>Longo prazo (3-5 anos):</strong> Atuar como Programador experiente em várias linguagens.</li>
+            </ol>
+        </section>
+
+        <!-- Seção Complementar (Aside) -->
+        <aside class="card dica-box">
+            <h3>📌 Curiosidade sobre mim</h3>
+            <p>Quando não estou programando, gosto de praticar lógica e algoritmos em jogos interativos!</p>
+        </aside>
+
+        <!-- Seção 7: Formulário de Contato -->
+        <section id="contato-form" class="card">
+            <h2>✉️ Entre em Contato</h2>
+            <form>
+                <div class="campo-grupo">
+                    <label for="nomeContato">Nome Completo:</label>
+                    <input type="text" id="nomeContato" required placeholder="Digite seu nome completo">
+                </div>
+
+                <div class="campo-grupo">
+                    <label for="emailContato">E-mail de Contato:</label>
+                    <input type="email" id="emailContato" required placeholder="seuemail@provedor.com">
+                </div>
+
+                <div class="campo-grupo">
+                    <label for="telefone">Telefone:</label>
+                    <input type="tel" id="telefone" placeholder="(11) 99999-9999">
+                </div>
+
+                <div class="campo-grupo">
+                    <label for="assuntoSelect">Assunto:</label>
+                    <select id="assuntoSelect">
+                        <option value="duvida">Dúvida sobre o curso</option>
+                        <option value="sugestao">Sugestão</option>
+                        <option value="orcamento">Proposta / Orçamento</option>
+                    </select>
+                </div>
+
+                <div class="campo-grupo">
+                    <label for="mensagemContato">Mensagem:</label>
+                    <textarea id="mensagemContato" rows="5" required placeholder="Escreva sua mensagem aqui..."></textarea>
+                </div>
+
+                <div class="acoes-formulario">
+                    <button type="submit" class="btn btn-principal">Enviar Mensagem</button>
+                    <button type="reset" class="btn btn-secundario">Limpar Campos</button>
+                </div>
+            </form>
+        </section>
+
+        <!-- Seção 8: Redes Sociais -->
+          <section id="links-redes" class="card">
+            <h2>🔗 Minhas Redes e Links Úteis</h2>
+            <div class="grid-botoes-redes">
+                <a href="https://github.com/wdarochasilva" target="_blank" class="btn btn-social btn-github">
+                    📂 Meu GitHub
+                </a>
+
+                <a href="willyam.rs1@gmail.com" class="btn btn-social btn-email">
+                    ✉️ E-mail Direto
+                </a>
+            </div>
+        </section>
+
+
+    </main>
+
+
+    <!-- Rodapé -->
+    <footer>
+        <p>copy; 2026 - Willyam Rocha da Silva | Desenvolvido com HTML Semântico e CSS</p>
+        <p>
+            <a href="#topo" class="btn btn-topo">Voltar ao topo ↑</a>
+        </p>
+    </footer>
+
+    <!-- ======================================================== -->
+    <!-- NOVO: LIGAÇÃO DO ARQUIVO JS EXTERNO (Sempre no final)   -->
+    <!-- ======================================================== -->
+    <script src="js/script.js"></script>
+
+</body>
+</html>
